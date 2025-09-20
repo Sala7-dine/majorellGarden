@@ -1,38 +1,69 @@
-/* Custom base styles */
+/* Global CSS Variables for Typography */
+:root {
+  --e-global-typography-primary-font-family: 'Inter', system-ui, sans-serif;
+  --e-global-typography-primary-font-size: 16px;
+  --e-global-typography-primary-font-weight: 400;
+  --e-global-typography-primary-line-height: 1.6;
+  --e-global-typography-primary-letter-spacing: 0;
+  --e-global-color-primary: #090403;
+  
+  /* Secondary typography for headings */
+  --e-global-typography-secondary-font-family: 'Playfair Display', serif;
+  --e-global-typography-secondary-font-weight: 600;
+  
+  /* New Brown/Orange Color Palette */
+  --e-global-color-text: #090403;
+  --e-global-color-background: #faf0f0;
+  --e-global-color-primary: #aa6b3a;
+  --e-global-color-secondary: #b66612;
+  --e-global-color-accent: #b8b8b8;
+  --e-global-color-neutral: #faf0f0;
+}
+
+/* Custom base styles with global variables */
 body {
-  font-family: 'Inter', system-ui, sans-serif;
-  color: #262626;
-  background-color: #fafafa;
+  font-family: var(--e-global-typography-primary-font-family), Sans-serif;
+  font-size: var(--e-global-typography-primary-font-size);
+  font-weight: var(--e-global-typography-primary-font-weight);
+  line-height: var(--e-global-typography-primary-line-height);
+  letter-spacing: var(--e-global-typography-primary-letter-spacing);
+  color: var(--e-global-color-text);
+  background-color: var(--e-global-color-background);
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--e-global-typography-secondary-font-family);
+  font-weight: var(--e-global-typography-secondary-font-weight);
+  line-height: 1.2;
+  color: var(--e-global-color-text);
 }
 
-/* Custom components */
+/* Custom components with global variables */
 .btn-primary {
-  background-color: #c4302b;
+  background: linear-gradient(to right, var(--e-global-color-primary), var(--e-global-color-secondary));
   color: white;
   padding: 0.75rem 1.5rem;
   border-radius: 0.5rem;
-  font-weight: 600;
+  font-family: var(--e-global-typography-primary-font-family), Sans-serif;
+  font-weight: var(--e-global-typography-secondary-font-weight);
   transition: all 0.3s ease;
   text-decoration: none;
   display: inline-block;
 }
 
 .btn-primary:hover {
-  background-color: #b12b26;
+  background: linear-gradient(to right, #b66612, #aa6b3a);
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
   transform: translateY(-2px);
 }
 
 .btn-secondary {
-  background-color: #d4a574;
+  background-color: var(--e-global-color-secondary);
   color: white;
   padding: 0.75rem 1.5rem;
   border-radius: 0.5rem;
-  font-weight: 600;
+  font-family: var(--e-global-typography-primary-font-family), Sans-serif;
+  font-weight: var(--e-global-typography-secondary-font-weight);
   transition: all 0.3s ease;
   text-decoration: none;
   display: inline-block;
@@ -57,6 +88,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Custom utilities */
+.global-typography {
+  font-family: var(--e-global-typography-primary-font-family), Sans-serif;
+  font-size: var(--e-global-typography-primary-font-size);
+  font-weight: var(--e-global-typography-primary-font-weight);
+  line-height: var(--e-global-typography-primary-line-height);
+  letter-spacing: var(--e-global-typography-primary-letter-spacing);
+  color: var(--e-global-color-primary);
+}
+
 .text-shadow {
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
