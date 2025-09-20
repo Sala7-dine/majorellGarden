@@ -1,0 +1,63 @@
+{
+  "common": {
+    "loading": "Laden...",
+    "error": "Er is een fout opgetreden",
+    "book_appointment": "Afspraak Maken",
+    "contact_us": "Contact Opnemen",
+    "learn_more": "Meer Info",
+    "view_all": "Bekijk Alles",
+    "close": "Sluiten"
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "Over Ons",
+    "services": "Diensten",
+    "contact": "Contact",
+    "products": "Producten"
+  },
+  "hero": {
+    "title": "Majorille Garden",
+    "subtitle": "Marokkaans Geïnspireerd Wellness Center",
+    "description": "Ervaar de unieke sensatie van Merzouga's therapeutische zandbaden in het hart van Nederland. Een perfecte mix van Marokkaanse traditie en Europees comfort.",
+    "cta": "Ontdek Onze Diensten"
+  },
+  "about": {
+    "title": "Over Majorille Garden",
+    "subtitle": "Waar Twee Culturen Elkaar Ontmoeten",
+    "description": "Ons centrum brengt het beste van Marokkaanse wellness tradities en Europees comfort samen. Gelegen in Nederland, bieden wij een zeldzame ervaring in Europa met authentieke therapeutische zandbaden direct geïnspireerd door de Marokkaanse woestijn.",
+    "mission": "Onze missie is om een warme, authentieke en verfijnde sfeer te bieden voor ontspanning, therapeutische behandelingen en culturele onderdompeling."
+  },
+  "services": {
+    "title": "Onze Diensten",  
+    "sand_bath": {
+      "title": "Therapeutisch Zandbad",
+      "description": "Een zeldzame ervaring in Europa, direct geïnspireerd door de Marokkaanse woestijn, om het lichaam te revitaliseren, spierpijn te verlichten en de bloedcirculatie te verbeteren."
+    },
+    "massage": {
+      "title": "Massages & Wellness Behandelingen",
+      "description": "Ontspannende, therapeutische en oosterse massages uitgevoerd door gekwalificeerde professionals."
+    },
+    "relaxation": {
+      "title": "Ontspanningsruimte & Boutique",
+      "description": "Een selectie van natuurlijke en ambachtelijke producten (arganolie, zepen, thee en accessoires) om de ervaring thuis voort te zetten."
+    }
+  },
+  "contact": {
+    "title": "Contact & Afspraken",
+    "subtitle": "Klaar om wellness te ervaren?",
+    "description": "Boek uw afspraak online via ons veilige reserveringssysteem.",
+    "form": {
+      "name": "Volledige Naam",
+      "email": "E-mailadres",
+      "phone": "Telefoonnummer",
+      "message": "Bericht",
+      "send": "Bericht Verzenden"
+    }
+  },
+  "footer": {
+    "tagline": "Uw wellness oase in Nederland",
+    "address": "Adres",
+    "hours": "Openingstijden",
+    "follow_us": "Volg Ons"
+  }
+}

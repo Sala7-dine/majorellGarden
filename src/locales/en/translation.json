@@ -1,0 +1,63 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "book_appointment": "Book Appointment",
+    "contact_us": "Contact Us",
+    "learn_more": "Learn More",
+    "view_all": "View All",
+    "close": "Close"
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact",
+    "products": "Products"
+  },
+  "hero": {
+    "title": "Majorille Garden",
+    "subtitle": "Moroccan-Inspired Wellness Center",
+    "description": "Experience the unique sensation of Merzouga's therapeutic sand baths in the heart of the Netherlands. A perfect blend of Moroccan tradition and European comfort.",
+    "cta": "Discover Our Services"
+  },
+  "about": {
+    "title": "About Majorille Garden",
+    "subtitle": "Where Two Cultures Meet",
+    "description": "Our center brings together the best of Moroccan wellness traditions and European comfort. Located in the Netherlands, we offer a rare experience in Europe with authentic therapeutic sand baths directly inspired by the Moroccan desert.",
+    "mission": "Our mission is to provide a warm, authentic and refined atmosphere for relaxation, therapeutic treatments and cultural immersion."
+  },
+  "services": {
+    "title": "Our Services",
+    "sand_bath": {
+      "title": "Therapeutic Sand Bath",
+      "description": "A rare experience in Europe, directly inspired by the Moroccan desert, to revitalize the body, relieve muscle pain and improve blood circulation."
+    },
+    "massage": {
+      "title": "Massages & Wellness Treatments",
+      "description": "Relaxing, therapeutic and oriental massages performed by qualified professionals."
+    },
+    "relaxation": {
+      "title": "Relaxation Space & Boutique",
+      "description": "A selection of natural and artisanal products (argan oil, soaps, teas and accessories) to extend the experience at home."
+    }
+  },
+  "contact": {
+    "title": "Contact & Appointments",
+    "subtitle": "Ready to experience wellness?",
+    "description": "Book your appointment online through our secure reservation system.",
+    "form": {
+      "name": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "message": "Message",
+      "send": "Send Message"
+    }
+  },
+  "footer": {
+    "tagline": "Your oasis of wellness in the Netherlands",
+    "address": "Address",
+    "hours": "Opening Hours",
+    "follow_us": "Follow Us"
+  }
+}
