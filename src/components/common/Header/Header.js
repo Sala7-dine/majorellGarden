@@ -12,11 +12,11 @@ const Header = () => {
 
   // Navigation items
   const navigationItems = [
-    { path: '/', label: 'Home', hasDropdown: true },
+    { path: '/', label: 'Home', hasDropdown: false },
     { path: '/about', label: 'About Us' },
     { path: '/services', label: 'Services' },
     { path: '/blog', label: 'Blog' },
-    { path: '/pages', label: 'Pages', hasDropdown: true },
+    { path: '/pages', label: 'Pages', hasDropdown: false },
     { path: '/contact', label: 'Contact Us' }
   ];
 
@@ -28,6 +28,10 @@ const Header = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Check if we're on home page and should show transparent header
+  const isHomePage = location.pathname === '/';
+  const shouldShowTransparent = isHomePage && !isScrolled;
 
   // Handle screen resize
   useEffect(() => {
@@ -75,9 +79,9 @@ const Header = () => {
         </svg>
       </div>
       <span className={`text-xl font-semibold transition-colors duration-300 ${
-        isScrolled ? 'text-amber-900' : 'text-white'
+        shouldShowTransparent ? 'text-white' : 'text-amber-900'
       }`}>
-        Spawell.
+        Majorille Garden
       </span>
     </Link>
   );
@@ -107,9 +111,9 @@ const Header = () => {
       <Link
         to={path}
         className={`relative font-medium transition-all duration-300 no-underline flex items-center ${
-          isScrolled 
-            ? `text-amber-800 hover:text-orange-600 ${isActive ? "text-orange-600 font-semibold" : ""}`
-            : `text-white hover:text-orange-200 ${isActive ? "text-orange-200 font-semibold" : ""}`
+          shouldShowTransparent 
+            ? `text-white hover:text-orange-200 ${isActive ? "text-orange-200 font-semibold" : ""}`
+            : `text-amber-800 hover:text-orange-600 ${isActive ? "text-orange-600 font-semibold" : ""}`
         }`}
         onClick={mobile ? closeMobileMenu : undefined}
       >
@@ -133,8 +137,8 @@ const Header = () => {
 
   return (
     <>
-      <header className={`${isScrolled ? 'sticky' : 'absolute'} top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'shadow-lg backdrop-blur-sm bg-white/95' : 'bg-transparent'
+      <header className={`${shouldShowTransparent ? 'absolute' : 'sticky'} top-0 w-full z-50 transition-all duration-300 ${
+        shouldShowTransparent ? 'bg-transparent' : 'shadow-lg backdrop-blur-sm bg-white/95'
       }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex items-center justify-between h-20">
@@ -161,9 +165,9 @@ const Header = () => {
                 <Link 
                   to="/contact" 
                   className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 no-underline flex items-center space-x-2 ${
-                    isScrolled 
-                      ? 'bg-amber-800 text-white hover:bg-amber-900'
-                      : 'bg-white/20 text-white border border-white/30 hover:bg-white hover:text-amber-900 backdrop-blur-sm'
+                    shouldShowTransparent 
+                      ? 'bg-white/20 text-white border border-white/30 hover:bg-white hover:text-amber-900 backdrop-blur-sm'
+                      : 'bg-amber-800 text-white hover:bg-amber-900'
                   }`}
                 >
                   <span>Book Appointment</span>
@@ -180,9 +184,9 @@ const Header = () => {
                 className={`relative z-50 p-2 rounded-lg transition-all duration-300 border-2 border-transparent focus:border-orange-400 focus:outline-none ${
                   mobileMenuOpen 
                     ? 'bg-orange-100 text-orange-600' 
-                    : isScrolled 
-                      ? 'hover:bg-gray-100 text-amber-800'
-                      : 'hover:bg-white/20 text-white backdrop-blur-sm'
+                    : shouldShowTransparent 
+                      ? 'hover:bg-white/20 text-white backdrop-blur-sm'
+                      : 'hover:bg-gray-100 text-amber-800'
                 }`}
                 onClick={toggleMobileMenu}
                 aria-label="Toggle menu"
