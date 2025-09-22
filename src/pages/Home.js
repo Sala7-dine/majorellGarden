@@ -435,32 +435,319 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Services Preview */}
-      <section className="py-16 px-6 bg-white">
-        <h2 className="text-center mb-16" style={{color: '#b66612'}}>{t('services.title')}</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          <div className="card text-center transition-transform hover:-translate-y-2" style={{backgroundColor: 'rgba(170, 107, 58, 0.1)', padding: '2rem', borderRadius: '1rem'}}>
-            <h3 className="mb-6" style={{color: '#b66612'}}>{t('services.sand_bath.title')}</h3>
-            <p className="leading-relaxed" style={{color: '#090403'}}>{t('services.sand_bath.description')}</p>
+      {/* Our Programs Section */}
+      <section className="py-24 px-6 bg-white">
+        <div className="max-w-7xl mx-auto">
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center backdrop-blur-sm rounded-full px-6 py-3 shadow-lg mb-6" style={{backgroundColor: 'rgba(170, 107, 58, 0.1)'}}>
+              <div className="w-2 h-2 rounded-full mr-3" style={{backgroundColor: '#b66612'}}></div>
+              <span className="font-semibold text-sm tracking-wide" style={{color: '#b66612'}}>Our Programs</span>
+            </div>
+            <h2 className="text-3xl lg:text-4xl font-bold leading-tight mb-4" style={{color: '#090403'}}>
+              Holistic programs to restore
+            </h2>
+            <p className="text-2xl lg:text-3xl font-light italic" style={{color: '#b66612'}}>
+              balance and vitality
+            </p>
           </div>
-          <div className="card text-center transition-transform hover:-translate-y-2" style={{backgroundColor: 'rgba(170, 107, 58, 0.1)', padding: '2rem', borderRadius: '1rem'}}>
-            <h3 className="mb-6" style={{color: '#b66612'}}>{t('services.massage.title')}</h3>
-            <p className="leading-relaxed" style={{color: '#090403'}}>{t('services.massage.description')}</p>
+
+          {/* Programs Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            {/* Relaxation & Stress Relief Program */}
+            <div className="group relative overflow-hidden rounded-3xl shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:shadow-3xl">
+              <div className="relative h-80">
+                <img 
+                  src="https://demo.awaikenthemes.com/spawell/wellness-center/wp-content/uploads/2025/07/case-study-3.jpg"
+                  alt="Relaxation & Stress Relief Program"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                {/* Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                
+                {/* Content */}
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <h3 className="text-xl font-bold text-white mb-2 leading-tight">
+                    Relaxation & Stress Relief Program
+                  </h3>
+                  
+                  {/* Arrow Button */}
+                  <div className="flex justify-end mt-4">
+                    <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center transition-all duration-300 group-hover:bg-white/90 cursor-pointer">
+                      <svg className="w-5 h-5" style={{color: '#b66612'}} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Skin Rejuvenation Program */}
+            <div className="group relative overflow-hidden rounded-3xl shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:shadow-3xl">
+              <div className="relative h-80">
+                <img 
+                  src="https://demo.awaikenthemes.com/spawell/wellness-center/wp-content/uploads/2025/07/case-study-3.jpg"
+                  alt="Skin Rejuvenation Program"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                {/* Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                
+                {/* Content */}
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <h3 className="text-xl font-bold text-white mb-2 leading-tight">
+                    Skin Rejuvenation Program
+                  </h3>
+                  
+                  {/* Arrow Button */}
+                  <div className="flex justify-end mt-4">
+                    <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center transition-all duration-300 group-hover:bg-white/90 cursor-pointer">
+                      <svg className="w-5 h-5" style={{color: '#b66612'}} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Monthly Wellness Memberships */}
+            <div className="group relative overflow-hidden rounded-3xl shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:shadow-3xl">
+              <div className="relative h-80">
+                <img 
+                  src="https://demo.awaikenthemes.com/spawell/wellness-center/wp-content/uploads/2025/07/case-study-3.jpg"
+                  alt="Monthly Wellness Memberships"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                {/* Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                
+                {/* Content */}
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <h3 className="text-xl font-bold text-white mb-2 leading-tight">
+                    Monthly Wellness Memberships
+                  </h3>
+                  
+                  {/* Arrow Button */}
+                  <div className="flex justify-end mt-4">
+                    <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center transition-all duration-300 group-hover:bg-white/90 cursor-pointer">
+                      <svg className="w-5 h-5" style={{color: '#b66612'}} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="card text-center transition-transform hover:-translate-y-2" style={{backgroundColor: 'rgba(170, 107, 58, 0.1)', padding: '2rem', borderRadius: '1rem'}}>
-            <h3 className="mb-6" style={{color: '#b66612'}}>{t('services.relaxation.title')}</h3>
-            <p className="leading-relaxed" style={{color: '#090403'}}>{t('services.relaxation.description')}</p>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-24 px-6" style={{backgroundColor: '#8B4513'}}>
+        <div className="max-w-7xl mx-auto">
+          {/* Section Header */}
+          <div className="flex items-start justify-between mb-16">
+            <div className="flex-1">
+              <div className="inline-flex items-center backdrop-blur-sm rounded-full px-6 py-3 shadow-lg mb-6" style={{backgroundColor: 'rgba(250, 240, 240, 0.1)'}}>
+                <div className="w-2 h-2 rounded-full mr-3" style={{backgroundColor: '#faf0f0'}}></div>
+                <span className="font-semibold text-sm tracking-wide text-white">Testimonials</span>
+              </div>
+              <h2 className="text-3xl lg:text-4xl font-bold text-white leading-tight mb-4">
+                Heartfelt stories of hope and
+              </h2>
+              <p className="text-2xl lg:text-3xl font-light italic text-white">
+                success
+              </p>
+            </div>
+            
+            {/* Google Rating Card */}
+            <div className="hidden lg:block ml-8">
+              <div className="bg-black/20 backdrop-blur-sm rounded-2xl p-6 flex items-center space-x-4">
+                <div className="flex items-center space-x-3">
+                  <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center">
+                    <svg className="w-6 h-6" viewBox="0 0 24 24">
+                      <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                      <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                      <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                      <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <div className="text-white font-semibold">Google Rating</div>
+                    <div className="flex items-center space-x-1">
+                      <span className="text-white text-lg font-bold">5.0</span>
+                      <div className="flex space-x-1">
+                        {[...Array(5)].map((_, i) => (
+                          <svg key={i} className="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                          </svg>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="flex -space-x-2">
+                    <div className="w-8 h-8 bg-gray-300 rounded-full border-2 border-white"></div>
+                    <div className="w-8 h-8 bg-gray-400 rounded-full border-2 border-white"></div>
+                    <div className="w-8 h-8 bg-gray-500 rounded-full border-2 border-white"></div>
+                    <div className="w-8 h-8 bg-gray-600 rounded-full border-2 border-white"></div>
+                    <div className="w-8 h-8 bg-gray-700 rounded-full border-2 border-white"></div>
+                  </div>
+                  <span className="text-white font-bold text-lg">5k</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Testimonials Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            
+            {/* Testimonial 1 - Jenny Wilson */}
+            <div className="bg-black/20 backdrop-blur-sm rounded-2xl p-8 relative">
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 bg-gray-300 rounded-full mr-4"></div>
+                <div>
+                  <h4 className="text-white font-semibold text-lg">Jenny Wilson</h4>
+                  <p className="text-white/80 text-sm">Senior Esthetician</p>
+                </div>
+                <div className="ml-auto">
+                  <svg className="w-8 h-8 text-white/40" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
+                  </svg>
+                </div>
+              </div>
+              <p className="text-white leading-relaxed">
+                "My monthly massage here is my favorite self-care ritual. Their team knows exactly what I need every time."
+              </p>
+            </div>
+
+            {/* Testimonial 2 - Theresa Webb */}
+            <div className="bg-black/20 backdrop-blur-sm rounded-2xl p-8 relative">
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 bg-gray-400 rounded-full mr-4"></div>
+                <div>
+                  <h4 className="text-white font-semibold text-lg">Theresa Webb</h4>
+                  <p className="text-white/80 text-sm">IVF Specialist</p>
+                </div>
+                <div className="ml-auto">
+                  <svg className="w-8 h-8 text-white/40" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
+                  </svg>
+                </div>
+              </div>
+              <p className="text-white leading-relaxed">
+                "My monthly massage here is my favorite self-care ritual. Their team knows exactly what I need every time."
+              </p>
+            </div>
+
+            {/* Testimonial 3 - Darlene Robertson */}
+            <div className="bg-black/20 backdrop-blur-sm rounded-2xl p-8 relative">
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 bg-gray-500 rounded-full mr-4"></div>
+                <div>
+                  <h4 className="text-white font-semibold text-lg">Darlene Robertson</h4>
+                  <p className="text-white/80 text-sm">Wellness Coach</p>
+                </div>
+                <div className="ml-auto">
+                  <svg className="w-8 h-8 text-white/40" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
+                  </svg>
+                </div>
+              </div>
+              <p className="text-white leading-relaxed">
+                "My monthly massage here is my favorite self-care ritual. Their team knows exactly what I need every time."
+              </p>
+            </div>
+          </div>
+
+          {/* Pagination Dots */}
+          <div className="flex justify-center space-x-3">
+            <div className="w-3 h-3 bg-white rounded-full"></div>
+            <div className="w-3 h-3 bg-white/40 rounded-full"></div>
+            <div className="w-3 h-3 bg-white/40 rounded-full"></div>
+            <div className="w-3 h-3 bg-white/40 rounded-full"></div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="text-white text-center py-16 px-6" style={{background: 'linear-gradient(135deg, #b66612, #aa6b3a)'}}>
-        <h2 className="text-white mb-6">{t('contact.subtitle')}</h2>
-        <p className="text-lg mb-8 opacity-90">{t('contact.description')}</p>
-        <button className="text-lg px-8 py-4 rounded-lg font-semibold transition-all hover:-translate-y-1" style={{backgroundColor: '#faf0f0', color: '#b66612'}} onMouseEnter={(e) => e.target.style.backgroundColor = '#b8b8b8'} onMouseLeave={(e) => e.target.style.backgroundColor = '#faf0f0'}>
-          {t('common.book_appointment')}
-        </button>
+      <section className="py-24 px-6 bg-white">
+        <div className="max-w-4xl mx-auto text-center">
+          {/* Badge */}
+          <div className="inline-flex items-center backdrop-blur-sm rounded-full px-6 py-3 shadow-lg mb-8" style={{backgroundColor: 'rgba(170, 107, 58, 0.1)'}}>
+            <div className="w-2 h-2 rounded-full mr-3" style={{backgroundColor: '#b66612'}}></div>
+            <span className="font-semibold text-sm tracking-wide" style={{color: '#b66612'}}>Ready to Transform</span>
+          </div>
+
+          {/* Main Heading */}
+          <h2 className="text-3xl lg:text-5xl font-bold leading-tight mb-6" style={{color: '#090403'}}>
+            Ready to experience wellness?
+          </h2>
+          
+          {/* Subheading */}
+          <p className="text-xl lg:text-2xl font-light italic mb-8" style={{color: '#b66612'}}>
+            Your journey to inner peace starts here
+          </p>
+
+          {/* Description */}
+          <p className="text-lg mb-12 leading-relaxed max-w-2xl mx-auto" style={{color: '#090403', opacity: '0.8'}}>
+            Book your personalized wellness experience today and discover the perfect balance 
+            of relaxation, rejuvenation, and holistic healing that your mind and body deserve.
+          </p>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <button className="px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:-translate-y-1 shadow-lg" style={{backgroundColor: '#b66612', color: '#faf0f0'}} onMouseEnter={(e) => e.target.style.backgroundColor = '#aa6b3a'} onMouseLeave={(e) => e.target.style.backgroundColor = '#b66612'}>
+              Book An Appointment
+            </button>
+            <button className="border-2 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:-translate-y-1" style={{borderColor: '#b66612', color: '#b66612'}} onMouseEnter={(e) => {e.target.style.backgroundColor = '#b66612'; e.target.style.color = '#faf0f0'}} onMouseLeave={(e) => {e.target.style.backgroundColor = 'transparent'; e.target.style.color = '#b66612'}}>
+              View Our Services
+            </button>
+          </div>
+
+          {/* Trust Indicators */}
+          <div className="mt-16 flex flex-col sm:flex-row items-center justify-center gap-8 text-center">
+            <div className="flex items-center space-x-3">
+              <div className="w-12 h-12 rounded-full flex items-center justify-center" style={{backgroundColor: 'rgba(170, 107, 58, 0.1)'}}>
+                <svg className="w-6 h-6" style={{color: '#b66612'}} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <div>
+                <p className="font-semibold" style={{color: '#090403'}}>Certified Therapists</p>
+                <p className="text-sm" style={{color: '#090403', opacity: '0.7'}}>Professional & Licensed</p>
+              </div>
+            </div>
+
+            <div className="flex items-center space-x-3">
+              <div className="w-12 h-12 rounded-full flex items-center justify-center" style={{backgroundColor: 'rgba(170, 107, 58, 0.1)'}}>
+                <svg className="w-6 h-6" style={{color: '#b66612'}} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div>
+                <p className="font-semibold" style={{color: '#090403'}}>Flexible Scheduling</p>
+                <p className="text-sm" style={{color: '#090403', opacity: '0.7'}}>Book Online 24/7</p>
+              </div>
+            </div>
+
+            <div className="flex items-center space-x-3">
+              <div className="w-12 h-12 rounded-full flex items-center justify-center" style={{backgroundColor: 'rgba(170, 107, 58, 0.1)'}}>
+                <svg className="w-6 h-6" style={{color: '#b66612'}} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+                </svg>
+              </div>
+              <div>
+                <p className="font-semibold" style={{color: '#090403'}}>5-Star Reviews</p>
+                <p className="text-sm" style={{color: '#090403', opacity: '0.7'}}>Trusted by 5k+ Clients</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </div>
   );
