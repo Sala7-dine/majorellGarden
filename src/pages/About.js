@@ -1,45 +1,437 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import image3 from '../assets/images/image3.jpg';
 
 const About = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="pt-8">
-      <section className="text-center py-16 px-6 bg-white">
-        <h1 className="text-secondary-500 mb-4">{t('about.title')}</h1>
-        <h2 className="text-primary-400 font-serif italic">{t('about.subtitle')}</h2>
-      </section>
+    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
+      {/* Hero Section - Minimized with Better Image Visibility */}
+      <div 
+        className="relative pt-20 pb-12 px-4 sm:px-6 lg:px-8 h-[70vh] flex items-center"
+        style={{
+          background: 'linear-gradient(135deg, #3b1a03ff 0%, #b66612 50%, #aa6b3a 100%)',
+          backgroundImage: `linear-gradient(135deg, rgba(139, 69, 19, 0.6) 0%, rgba(121, 66, 7, 0.8) 50%, rgba(135, 76, 31, 0.5) 100%), url(${image3})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        <div className="max-w-7xl mx-auto w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left Content */}
+            <div className="text-white max-w-2xl">
+              <h1 className="text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
+                We Offer Best Quality{' '}
+                <span className="font-light text-white">Wellness Service!</span>
+              </h1>
+              
+              <p className="text-lg text-white/90 mb-10 leading-relaxed">
+                Spa and Wellness Center Website Theme, 
+                We Providing Best Healing Experience & 24/7 Support.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-3">
+                <button className="px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center justify-center space-x-2" style={{backgroundColor: '#faf0f0', color: '#090403'}} onMouseEnter={(e) => e.target.style.backgroundColor = '#b8b8b8'} onMouseLeave={(e) => e.target.style.backgroundColor = '#faf0f0'}>
+                  <span>Book Now</span>
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </button>
+                <button className="border-2 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center justify-center space-x-2" style={{borderColor: '#faf0f0'}} onMouseEnter={(e) => {e.target.style.backgroundColor = '#faf0f0'; e.target.style.color = '#090403'}} onMouseLeave={(e) => {e.target.style.backgroundColor = 'transparent'; e.target.style.color = 'white'}}>
+                  <span>Our Services</span>
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            
+            {/* Right side - Image area (kept for layout balance) */}
+            <div className="hidden lg:block">
+              {/* This space balances the layout, image is in background */}
+            </div>
+          </div>
+        </div>
+      </div>
 
-      <section className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center py-16 px-6 max-w-6xl mx-auto">
-        <div className="about-text">
-          <p className="text-lg leading-7 text-neutral-400 mb-6">{t('about.description')}</p>
-          <p className="text-lg leading-7 text-neutral-400 mb-6">{t('about.mission')}</p>
-        </div>
-        <div className="about-image">
-          <div className="placeholder-image w-full h-80">
-            About Image - Spa Interior
-          </div>
-        </div>
-      </section>
+      {/* Stats Cards - With Site Colors & Minimized Text */}
+      <div className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Total Users */}
+            <div className="text-center">
+              <div className="text-3xl lg:text-4xl font-bold mb-3">
+                <span style={{color: '#090403'}}>5.4</span>
+                <span style={{color: '#aa6b3a'}}>M+</span>
+              </div>
+              <h3 className="text-lg font-bold mb-3" style={{color: '#090403'}}>Total Users</h3>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                The total number of registered users on the platform.
+              </p>
+            </div>
 
-      <section className="bg-white py-16 px-6">
-        <h2 className="text-center text-secondary-500 mb-16">Our Values</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-          <div className="text-center p-8">
-            <h3 className="text-primary-400 mb-4">Authenticity</h3>
-            <p className="text-neutral-400">Genuine Moroccan wellness traditions</p>
-          </div>
-          <div className="text-center p-8">
-            <h3 className="text-primary-400 mb-4">Quality</h3>
-            <p className="text-neutral-400">Premium natural products and expert care</p>
-          </div>
-          <div className="text-center p-8">
-            <h3 className="text-primary-400 mb-4">Wellness</h3>
-            <p className="text-neutral-400">Holistic approach to mind and body health</p>
+            {/* Revenue */}
+            <div className="text-center">
+              <div className="text-3xl lg:text-4xl font-bold mb-3">
+                <span style={{color: '#090403'}}>$80</span>
+                <span style={{color: '#aa6b3a'}}>K</span>
+              </div>
+              <h3 className="text-lg font-bold mb-3" style={{color: '#090403'}}>Revenue</h3>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                The total revenue generated by the application.
+              </p>
+            </div>
+
+            {/* Engagement */}
+            <div className="text-center">
+              <div className="text-3xl lg:text-4xl font-bold mb-3">
+                <span style={{color: '#090403'}}>100</span>
+                <span style={{color: '#aa6b3a'}}>K</span>
+              </div>
+              <h3 className="text-lg font-bold mb-3" style={{color: '#090403'}}>Engagement</h3>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                The level of user engagement with the application's content and features.
+              </p>
+            </div>
+
+            {/* Server Uptime */}
+            <div className="text-center">
+              <div className="text-3xl lg:text-4xl font-bold mb-3">
+                <span style={{color: '#090403'}}>99.9</span>
+                <span style={{color: '#aa6b3a'}}>%</span>
+              </div>
+              <h3 className="text-lg font-bold mb-3" style={{color: '#090403'}}>Server Uptime</h3>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                The percentage of time the server has been operational and available.
+              </p>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
+
+      {/* Treatment Description Section */}
+      <div className="py-16 px-4 sm:px-6 lg:px-8 bg-orange-50">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-6" style={{color: '#090403'}}>
+              Traditional Sand Bath Treatment
+            </h2>
+            <div className="w-20 h-1 mx-auto mb-8" style={{backgroundColor: '#aa6b3a'}}></div>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left Content */}
+            <div className="space-y-6">
+              <p className="text-lg leading-relaxed" style={{color: '#090403'}}>
+                This unique, natural, and traditional treatment is held in the countryside of Morocco. 
+                At Majorille Garden, the treatment takes place in a luxurious, comfortable, and inspired 
+                sand bath using our own organic products.
+              </p>
+              
+              <p className="text-lg leading-relaxed" style={{color: '#090403'}}>
+                The warm sand in the massage bed feels pleasant and has a soothing effect on rheumatism, 
+                hernia complaints, sciatica, and circulation problems. It also helps with stiffness, 
+                cramps, and fatigue.
+              </p>
+              
+              <p className="text-lg leading-relaxed" style={{color: '#090403'}}>
+                The warm sand encourages a natural position and doesn't exert unpleasant pressure, 
+                even when fully compressed for optimal positioning. The sand is very malleable and 
+                comfortable, and promotes muscle flexibility and reduces stiffness.
+              </p>
+              
+              <p className="text-lg leading-relaxed font-medium" style={{color: '#aa6b3a'}}>
+                Many rheumatism patients find a sand bath treatment to be soothing.
+              </p>
+            </div>
+            
+            {/* Right Content - Benefits */}
+            <div className="bg-white rounded-2xl p-8 shadow-lg">
+              <h3 className="text-2xl font-bold mb-6" style={{color: '#090403'}}>
+                Treatment Benefits
+              </h3>
+              <div className="space-y-4">
+                <div className="flex items-start space-x-3">
+                  <div className="w-6 h-6 rounded-full flex items-center justify-center mt-1" style={{backgroundColor: '#aa6b3a'}}>
+                    <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-lg" style={{color: '#090403'}}>Rheumatism Relief</h4>
+                    <p className="text-gray-600">Soothing effect on rheumatic conditions</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-3">
+                  <div className="w-6 h-6 rounded-full flex items-center justify-center mt-1" style={{backgroundColor: '#aa6b3a'}}>
+                    <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-lg" style={{color: '#090403'}}>Muscle Flexibility</h4>
+                    <p className="text-gray-600">Promotes flexibility and reduces stiffness</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-3">
+                  <div className="w-6 h-6 rounded-full flex items-center justify-center mt-1" style={{backgroundColor: '#aa6b3a'}}>
+                    <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-lg" style={{color: '#090403'}}>Circulation Improvement</h4>
+                    <p className="text-gray-600">Helps with circulation problems</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-3">
+                  <div className="w-6 h-6 rounded-full flex items-center justify-center mt-1" style={{backgroundColor: '#aa6b3a'}}>
+                    <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-lg" style={{color: '#090403'}}>Natural Comfort</h4>
+                    <p className="text-gray-600">Organic products in luxurious setting</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+     
+
+      {/* About Our Journey Section */}
+      <div className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            
+            {/* Left Content */}
+            <div className="order-2 lg:order-1">
+              {/* Badge */}
+              <div className="inline-flex items-center backdrop-blur-sm rounded-full px-6 py-3 shadow-lg mb-8" style={{backgroundColor: 'rgba(170, 107, 58, 0.1)'}}>
+                <div className="w-3 h-3 rounded-full mr-3 animate-pulse" style={{background: 'linear-gradient(to right, #aa6b3a, #b66612)'}}></div>
+                <span className="font-semibold text-sm tracking-wide" style={{color: '#b66612'}}>✨ About Our Journey</span>
+              </div>
+
+              {/* Main Heading */}
+              <h2 className="text-3xl lg:text-4xl font-bold leading-tight mb-6">
+                <span style={{color: '#b66612'}}>Wellness</span>{' '}
+                <span style={{color: '#090403'}}>meets</span>{' '}
+                <span className="italic" style={{background: 'linear-gradient(to right, #aa6b3a, #b66612)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>artistry</span>
+              </h2>
+
+              {/* Description */}
+              <p className="text-lg mb-8 leading-relaxed" style={{color: '#090403'}}>
+                Découvrez une expérience spa unique où chaque soin est une œuvre d'art dédiée à votre bien-être. 
+                Nos thérapeutes experts créent des moments de pure sérénité dans un cadre authentiquement marocain.
+              </p>
+
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-3">
+                <button className="group text-white px-6 py-3 rounded-xl font-medium transition-all duration-500 hover:shadow-xl hover:scale-105 flex items-center justify-center space-x-2" style={{background: 'linear-gradient(to right, #aa6b3a, #b66612)'}}>
+                  <span>Découvrir nos soins</span>
+                  <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </button>
+                
+                <button className="group border-2 px-6 py-3 rounded-xl font-medium transition-all duration-300 flex items-center justify-center space-x-2" style={{borderColor: '#b66612', color: '#b66612'}} onMouseEnter={(e) => {e.target.style.backgroundColor = '#b66612'; e.target.style.color = 'white'}} onMouseLeave={(e) => {e.target.style.backgroundColor = 'transparent'; e.target.style.color = '#b66612'}}>
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1M12 9v1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span>Notre équipe</span>
+                </button>
+              </div>
+            </div>
+
+            {/* Right Side - Image */}
+            <div className="order-1 lg:order-2">
+              <div className="relative">
+                <img 
+                  src="https://demo.awaikenthemes.com/spawell/wellness-center/wp-content/uploads/2025/07/about-img-1.jpg"
+                  alt="Spa massage therapy"
+                  className="w-full h-[400px] object-cover rounded-3xl shadow-2xl"
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-amber-900/20 rounded-3xl"></div>
+                
+                {/* Experience badge */}
+                <div className="absolute bottom-4 left-4">
+                  <div className="backdrop-blur-sm rounded-3xl px-6 py-4 shadow-2xl bg-white/90">
+                    <div className="text-center">
+                      <div className="text-2xl font-bold" style={{color: '#b66612'}}>15+</div>
+                      <div className="text-sm font-semibold" style={{color: '#090403'}}>Années d'expertise</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+       {/* Values Section - Simple & Clean Design */}
+      <div className="py-16 px-4 sm:px-6 lg:px-8 bg-amber-900">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Our Core Values</h2>
+            <div className="w-16 h-1 mx-auto" style={{backgroundColor: '#faf0f0'}}></div>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Authenticity */}
+            <div className="text-center">
+              <div className="bg-white/10 rounded-xl p-6 backdrop-blur-sm border border-white/10">
+                <div className="w-12 h-12 mx-auto mb-4 rounded-full flex items-center justify-center" style={{backgroundColor: '#faf0f0'}}>
+                  <svg className="w-6 h-6" style={{color: '#090403'}} fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-bold text-white mb-3">Authenticity</h3>
+                <p className="text-sm text-white/80 leading-relaxed">
+                  Genuine healing practices rooted in tradition
+                </p>
+              </div>
+            </div>
+
+            {/* Excellence */}
+            <div className="text-center">
+              <div className="bg-white/10 rounded-xl p-6 backdrop-blur-sm border border-white/10">
+                <div className="w-12 h-12 mx-auto mb-4 rounded-full flex items-center justify-center" style={{backgroundColor: '#faf0f0'}}>
+                  <svg className="w-6 h-6" style={{color: '#090403'}} fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-bold text-white mb-3">Excellence</h3>
+                <p className="text-sm text-white/80 leading-relaxed">
+                  Highest standards in every treatment we provide
+                </p>
+              </div>
+            </div>
+
+            {/* Compassion */}
+            <div className="text-center">
+              <div className="bg-white/10 rounded-xl p-6 backdrop-blur-sm border border-white/10">
+                <div className="w-12 h-12 mx-auto mb-4 rounded-full flex items-center justify-center" style={{backgroundColor: '#faf0f0'}}>
+                  <svg className="w-6 h-6" style={{color: '#090403'}} fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-bold text-white mb-3">Compassion</h3>
+                <p className="text-sm text-white/80 leading-relaxed">
+                  Caring approach to every wellness journey
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Why Choose Us Section */}
+      <div className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            
+            {/* Left Side - Content */}
+            <div className="order-2 lg:order-1">
+              {/* Badge */}
+              <div className="inline-flex items-center backdrop-blur-sm rounded-full px-6 py-3 shadow-lg mb-8" style={{backgroundColor: 'rgba(170, 107, 58, 0.1)'}}>
+                <div className="w-2 h-2 rounded-full mr-3" style={{backgroundColor: '#b66612'}}></div>
+                <span className="font-semibold text-sm tracking-wide" style={{color: '#b66612'}}>Why Choose Us</span>
+              </div>
+
+              {/* Main Heading */}
+              <h2 className="text-3xl lg:text-4xl font-bold leading-tight mb-6" style={{color: '#090403'}}>
+                Where healing, comfort, and{' '}
+                <span className="italic" style={{color: '#b66612'}}>luxury come together</span>
+              </h2>
+
+              {/* Description */}
+              <p className="text-lg mb-8 leading-relaxed" style={{color: '#090403', opacity: '0.8'}}>
+                At our spa, you're more than a client — you're family. Our experienced therapists bring 
+                compassion, skill, and personalized attention to every treatment.
+              </p>
+
+              {/* Services List */}
+              <div className="space-y-6">
+                {/* Hot Stone Therapy */}
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center" style={{backgroundColor: 'rgba(170, 107, 58, 0.1)'}}>
+                    <div className="w-6 h-6 rounded-full border-2 flex items-center justify-center" style={{borderColor: '#b66612'}}>
+                      <div className="w-2 h-2 rounded-full" style={{backgroundColor: '#b66612'}}></div>
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-semibold mb-2" style={{color: '#b66612'}}>
+                      Hot Stone Therapy
+                    </h3>
+                    <p className="text-sm leading-relaxed" style={{color: '#090403', opacity: '0.8'}}>
+                      Experience the warmth of volcanic stones to release tension and promote deep relaxation.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Wellness Consultation */}
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center" style={{backgroundColor: 'rgba(170, 107, 58, 0.1)'}}>
+                    <svg className="w-6 h-6" style={{color: '#b66612'}} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-semibold mb-2" style={{color: '#b66612'}}>
+                      Wellness Consultation & Personal Plan
+                    </h3>
+                    <p className="text-sm leading-relaxed" style={{color: '#090403', opacity: '0.8'}}>
+                      Meet with our wellness experts to create a custom self-care routine based on your goals.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Side - Image */}
+            <div className="order-1 lg:order-2">
+              <div className="relative">
+                <img 
+                  src="https://demo.awaikenthemes.com/spawell/wellness-center/wp-content/uploads/2025/07/why-choose-us-image.jpg"
+                  alt="Spa massage therapy treatment"
+                  className="w-full h-[400px] object-cover rounded-3xl shadow-2xl"
+                />
+                {/* Overlay gradient */}
+                <div className="absolute inset-0 rounded-3xl" style={{background: 'linear-gradient(to bottom, transparent 0%, transparent 70%, rgba(182, 102, 18, 0.1) 100%)'}}></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* CTA Section */}
+      <div className="py-20 px-4 sm:px-6 lg:px-8 bg-orange-50">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold mb-6 text-amber-900">
+            Start Your Wellness Journey
+          </h2>
+          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+            Experience the transformative power of authentic wellness with our expert team
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="px-8 py-4 bg-amber-900 text-white rounded-xl font-semibold hover:bg-amber-800 transition-colors">
+              Schedule Consultation
+            </button>
+            <button className="px-8 py-4 border-2 border-amber-900 text-amber-900 rounded-xl font-semibold hover:bg-amber-50 transition-colors">
+              Explore Services
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

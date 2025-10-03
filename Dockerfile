@@ -3,14 +3,19 @@ FROM node:18 AS development
 
 WORKDIR /app
 
+# Copier les fichiers package en premier pour cache optimization
 COPY package*.json ./
 
+# Installer les dépendances
 RUN npm install --legacy-peer-deps
 
+# Copier le reste des fichiers
 COPY . .
 
+# Exposer le port
 EXPOSE 3000
 
+# Commande pour le développement avec hot reload
 CMD ["npm", "start"]
 
 # Stage de production

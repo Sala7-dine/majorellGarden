@@ -31,7 +31,8 @@ const Header = () => {
 
   // Check if we're on home page and should show transparent header
   const isHomePage = location.pathname === '/';
-  const shouldShowTransparent = isHomePage && !isScrolled;
+  const isAboutPage = location.pathname === '/about';
+  const shouldShowTransparent = (isHomePage || isAboutPage) && !isScrolled;
 
   // Handle screen resize
   useEffect(() => {
